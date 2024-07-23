@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Changer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: red;
+            color: white;
+            text-align: center;
+        }
+        #color-info {
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        #color-button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #color-button:hover {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="color-info">Background Color: Red</div>
+        <button id="color-button" onclick="changeColor()">Click Me</button>
+    </div>
+    
+    <script>
+        function changeColor() {
+            const body = document.body;
+            const colorInfo = document.getElementById('color-info');
+            if (body.style.backgroundColor === 'red') {
+                body.style.backgroundColor = 'blue';
+                colorInfo.textContent = 'Background Color: Blue';
+            } else {
+                body.style.backgroundColor = 'red';
+                colorInfo.textContent = 'Background Color: Red';
+            }
+        }
+    </script>
+</body>
+</html>
